@@ -90,19 +90,17 @@ public function user_update($id, Request $request)
 // Model Image function
 // Model Image function
 // Model Image function
- public function getImage()
-    {
-        if(!empty($this->image) && file_exists('public/images/blog/'.$this->image)) 
+     public function getImage()
         {
-            return url('public/images/blog/'.$this->image);
+            if(!empty($this->image) && file_exists('public/images/blog/'.$this->image)) 
+            {
+                return url('public/images/blog/'.$this->image);
+            }
+            else 
+            {
+                return "";
+            }
         }
-        else 
-        {
-            return "";
-        }
-    }
-
-
 
 
 
