@@ -86,6 +86,24 @@ public function user_update($id, Request $request)
         </div>
     </div>
 
+        
+// Model Image function
+// Model Image function
+// Model Image function
+ public function getImage()
+    {
+        if(!empty($this->image) && file_exists('public/images/blog/'.$this->image)) 
+        {
+            return url('public/images/blog/'.$this->image);
+        }
+        else 
+        {
+            return "";
+        }
+    }
+
+
+
 
 
 ?>
